@@ -1,0 +1,40 @@
+{
+  "clients": [
+    {
+      "name": "Derick Tremblay",
+      "cpf": "84954029635",
+      "address": "66568 Brakus Drive",
+      "id": 2
+    },
+    {
+      "name": "Emilia Hettinger",
+      "cpf": "19429466780",
+      "address": "44727 Little Mill",
+      "id": 3
+    },
+    {
+      "name": "Darrel Padberg DDS",
+      "cpf": "94621691600",
+      "address": "773 Brown Mountains",
+      "id": 4
+    },
+    {
+      "name": "Christiana King",
+      "cpf": "27861201791",
+      "address": "4146 Runolfsson Fork",
+      "id": 5
+    },
+    {
+      "name": "Dr. Arnold Armstrong",
+      "cpf": "18412739370",
+      "address": "7691 Ankunding Forges",
+      "id": 6
+    },
+    {
+      "name": "Test 3",
+      "cpf": 1234567890,
+      "address": "Test Street",
+      "id": 7
+    }
+  ]
+}
