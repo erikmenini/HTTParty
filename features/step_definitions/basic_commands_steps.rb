@@ -1,7 +1,6 @@
 
 Given("I wanna include a new client") do
 	@body = @Client.new_client
-	puts @body
 end
 
 When("I post his datas") do
@@ -9,18 +8,14 @@ When("I post his datas") do
 end
 
 Then("i should validate the response code {int}") do |code|
-	puts @responsePOST.body
 	expect(@responsePOST.code).to eq(code)
 end
-
 
 Given("I do a GET in the endpoint client with id {int}") do |id|
 	@responseGET = HTTParty.get(@base_url_client + "#{id}",  :headers => {"Content-Type" => 'application/json'})
   end
   
-  
 Then("i should see all the clients") do
-	puts @responseGET
 	expect(@responseGET.code).to eq(200)
   end
 
@@ -44,6 +39,13 @@ Given("I delete the client with id {int}") do |id|
 	@responseDELETE = HTTParty.delete(@base_url_client+ "#{id}", :headers => {"Content-Type" => 'application/json'})
   end
   
-  Then("the response should be nil") do
+Then("the response should be nil") do
 	expect(@responseDELETE["id"]).to eq nil
-  end
+end
+	
+	Then("i do a get to check the post") do
+		bodyget = JSON.parse (@body)
+		expect(@responsePOST["name"]).to eq (bodyget["name"])
+		expect(@responsePOST["cpf"]).to eq (bodyget["cpf"])
+		expect(@responsePOST["address"]).to eq (bodyget["address"])
+	end

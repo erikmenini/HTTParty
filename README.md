@@ -13,7 +13,7 @@ brew install npm
 npm install -g json-server
 ```
 
-Depois execute o servidor conforme abaixo
+Acesse a pasta fakeapi e depois execute o servidor conforme abaixo
 
 ```ruby
 json-server --watch endpoints.json

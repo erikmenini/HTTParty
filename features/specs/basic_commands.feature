@@ -22,3 +22,9 @@ Then i should validate the data
 Scenario: Delete the client
 Given I delete the client with id 1
 Then the response should be nil
+
+@postandget
+Scenario: POST and check if the post it was ok
+Given I wanna include a new client
+When I post his datas
+Then i do a get to check the post
